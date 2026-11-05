@@ -17,11 +17,21 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-gradient-to-tr from-[#E88B88]/15 via-amber-400/10 to-transparent blur-3xl pointer-events-none rounded-full" />
 
       <div className="relative z-10 flex flex-col items-center text-center">
-        {/* Subtle Vintage Badge */}
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#2B2824] border border-neutral-700/80 text-xs text-cream-200 mb-8 shadow-sm light:bg-[#F2ECE1] light:border-[#DDD5C7] light:text-[#5A544C]">
-          <Sparkles className="w-3.5 h-3.5 text-[#E88B88]" />
-          <span className="font-medium tracking-wide">Vintage Photobooth in Your Browser</span>
-          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 light:bg-emerald-500" />
+        {/* Minimalist Glossy Glassmorphism Badge */}
+        <div className="relative group inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full mb-8 select-none transition-all duration-300 hover:scale-[1.03] backdrop-blur-xl bg-white/[0.05] border border-white/[0.12] shadow-[0_4px_20px_-2px_rgba(0,0,0,0.5),inset_0_1px_1px_0_rgba(255,255,255,0.25)] hover:border-white/[0.25] hover:shadow-[0_4px_25px_-2px_rgba(232,139,136,0.3),inset_0_1px_1px_0_rgba(255,255,255,0.35)] light:bg-black/[0.03] light:border-black/[0.08] light:shadow-[0_4px_20px_-2px_rgba(0,0,0,0.06),inset_0_1px_1px_0_rgba(255,255,255,0.8)] light:hover:border-black/[0.15]">
+          {/* Subtle top glossy reflection highlight */}
+          <div className="absolute inset-x-3 top-0 h-px bg-gradient-to-r from-transparent via-white/50 to-transparent pointer-events-none light:via-black/10" />
+
+          {/* Glowing pulse dot */}
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#E88B88] opacity-75" />
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-[#E88B88]" />
+          </span>
+
+          <span className="text-xs font-medium tracking-wide text-neutral-200 group-hover:text-white transition-colors light:text-[#3A352F] light:group-hover:text-[#1C1A17]">
+            Vintage Photobooth in Your Browser
+          </span>
+          <ArrowDown className="w-3.5 h-3.5 text-[#E88B88] group-hover:text-[#FFB6B6] transition-colors light:text-[#E88B88] light:group-hover:text-[#FFB6B6]" />
         </div>
 
         {/* Distinctive Logo & Wordmark */}

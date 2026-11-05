@@ -53,16 +53,6 @@ export const LandingPage: React.FC<LandingPageProps> = ({
               Explore Styles
             </button>
 
-            <Button
-              variant="primary"
-              size="sm"
-              icon={<Camera className="w-4 h-4" />}
-              onClick={() => onStartBooth()}
-              className="font-bold text-neutral-950 light:text-neutral-900"
-            >
-              Start Photobooth
-            </Button>
-
             {onToggleTheme && (
               <button
                 type="button"

@@ -1,10 +1,10 @@
 import React from 'react';
-import { Camera, ShieldCheck, Heart } from 'lucide-react';
+import { Camera, ShieldCheck, Heart, Mail } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   return (
     <footer className="border-t border-neutral-800/80 bg-[#121110] py-12 px-4 sm:px-6 lg:px-8 text-neutral-400 text-xs light:border-[#E8E2D8] light:bg-[#F4EFE6] light:text-[#5A544C]">
-      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
         {/* Brand */}
         <div className="flex items-center gap-2.5">
           <div className="w-8 h-8 rounded-xl bg-[#E88B88] text-neutral-950 flex items-center justify-center font-bold light:text-neutral-900">
@@ -26,11 +26,21 @@ export const Footer: React.FC = () => {
           <span>Zero cloud uploads. Photos process entirely inside your browser.</span>
         </div>
 
-        {/* Copyright */}
-        <div className="flex items-center gap-1 text-neutral-400 light:text-[#7A7062]">
-          <span>Crafted with vintage love</span>
-          <Heart className="w-3.5 h-3.5 text-rose-400 fill-rose-400 inline light:text-rose-500 light:fill-rose-500" />
-          <span>• © {new Date().getFullYear()} SnapStrip</span>
+        {/* Contact Email & Copyright */}
+        <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 text-neutral-400 light:text-[#7A7062]">
+          <a
+            href="mailto:amityohan20@gmail.com"
+            className="flex items-center gap-1.5 text-neutral-300 hover:text-[#E88B88] transition-colors light:text-[#4A4237] light:hover:text-[#E88B88]"
+          >
+            <Mail className="w-3.5 h-3.5 text-[#E88B88]" />
+            <span>amityohan20@gmail.com</span>
+          </a>
+          <span className="hidden sm:inline opacity-40">•</span>
+          <div className="flex items-center gap-1">
+            <span>Crafted with vintage love</span>
+            <Heart className="w-3.5 h-3.5 text-rose-400 fill-rose-400 inline light:text-rose-500 light:fill-rose-500" />
+            <span>• © {new Date().getFullYear()} SnapStrip</span>
+          </div>
         </div>
       </div>
     </footer>
